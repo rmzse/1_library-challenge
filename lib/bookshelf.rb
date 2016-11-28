@@ -1,7 +1,7 @@
 class Bookshelf
   attr_accessor :bookshelf
 
-  def initialize(file_path_string, nil) do
+  def initialize(file_path_string=nil) do
     file_path_string != nil ? @file = file_path_string : ( raise 'Error: Smth went south, file #{bookshelf} not there.' )
   end
 
