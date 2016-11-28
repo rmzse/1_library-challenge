@@ -10,7 +10,7 @@ describe Bookshelf do
 
     it ' in a file that exists' do
       binding.pry
-      expect(file).to be_an_existing_file
+      expect(file).not_to be_nil
     end
   end
 
