@@ -8,13 +8,13 @@ describe Bookshelf do
       bookshelf = YAML.load_file('./lib/data.yml')
     end
 
-    it ' in a file that exists' do
+    it ' in a file that exists on initialize' do
       expect(bookshelf).not_to be_nil
     end
 
-    it ' and throws an error if that file is missing' do
+    it ' and throws an error if that file is missing on initialize' do
       bookshelf = nil
-      expect(bookshelf).to raise_error 'Error: file #{bookshelf} does not exist.'
+      expect(bookshelf).to raise_error 'Error: Smth went south, file #{bookshelf} not there.'
     end
 
   end
