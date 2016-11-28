@@ -3,10 +3,13 @@ require './lib/bookshelf.rb'
 describe Bookshelf do
 
   describe 'has the collection of library books' do
-    # let(:file) { File.new( YAML.load_file('./lib/data.yml') ) }
-    before { file = YAML.load_file('./lib/data.yml') }
+    file = ''
+    before do
+      file = YAML.load_file('./lib/data.yml')
+    end
 
     it ' in a file that exists' do
+      binding.pry
       expect(file).to be_an_existing_file
     end
   end
