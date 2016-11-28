@@ -14,7 +14,7 @@ describe Bookshelf do
 
     it ' and throws an error if that file is missing' do
       bookshelf = nil
-      expect(bookshelf.select).to raise_error 'Error: file #{bookshelf} does not exist.'
+      expect(bookshelf).to raise_error 'Error: file #{bookshelf} does not exist.'
     end
 
   end
